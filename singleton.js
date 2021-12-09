@@ -1,3 +1,5 @@
+const assert = require('assert')
+
 // Closure + IIFE
 
 const Singleton = (function(){
@@ -49,3 +51,5 @@ console.log(s1.getPrivatePropByKey('privateName'))
 
 s1.updatePrivateProp('privateTitle', 'nothing')
 console.log(s1.getPrivatePropByKey('privateTitle'))
+s2 = Singleton.getInstance()
+assert.equal(s1, s2)
