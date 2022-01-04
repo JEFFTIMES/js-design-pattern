@@ -45,7 +45,7 @@ s1.publicName = 'publicProp';
 console.log(s1);
 s1.addPublicProp('newPublicProp', 'approachable');
 console.log(s1);
-console.log(s1.getPrivateProp('privateAmount'));
+console.log(s1.getPrivateProp('privateName'));
 s1.addPrivateProp('privateTitle', 'nothing');
 console.log(s1.getPrivateProp('privateTitle'));
 let s2 = Singleton.getInstance();
