@@ -16,3 +16,9 @@ pubSub.subscribe('Stay at home',parent.notified)
 
 teacher.publish(pubSub, 'Back to school', 'welcome back to school.');
 doctor.publish(pubSub, 'Stay at home', 'please do not go back to school.');
+
+pubSub.unsubscribe('Back to school', parent.notified)
+teacher.publish(pubSub, 'Back to school', 'welcome back to school.');
+
+pubSub.subscribe('Back to school',student.notified)
+teacher.publish(pubSub, 'Back to school', 'welcome back to school.')

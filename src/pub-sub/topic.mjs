@@ -6,6 +6,10 @@ export default class Topic {
     if(typeof callback !== 'function'){
       throw new Error('callback must be a function');
     }
+    if(this.subscribers.filter(sub=>sub === callback)[0] !== undefined){
+      console.log('subscriber already exists: ' + callback)
+      return
+    }
     //this.subscribers.push(callback);
     this.subscribers = [...this.subscribers, callback];
   }
